@@ -34,6 +34,8 @@
     border-top: 1px solid rgba(255, 255, 255,0.3); 
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
   }
+  
+
 .navigation li:last-of-type a {
     border-bottom: none;
   }
@@ -53,10 +55,53 @@
   }
   
 .main {
+    display: flex;
+    flex-flow: column;
     text-align: left;
     background: deepskyblue;
   }
-  
+
+
+  /* Flex Project Styling  */
+
+.flex-projects-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.flex-project-featured {
+    background: tomato;
+    padding: 5px;
+    margin: 5px;
+    /* width: 200px;
+    height: 150px; */
+    margin-top: 10px;
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+  }
+
+.flex-project {
+    background: tomato;
+    padding: 5px;
+    margin: 5px;
+    /* width: 150px;
+    height: 150px; */
+    margin-top: 10px;
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+  }
+
+/* Aside Column Styles */
 .aside-1 {
     background: gold;
   }
@@ -67,7 +112,8 @@
 body {
     padding: 2em; 
   }
-/* Media Queries for larger viewport widths  */
+
+  /* Media Queries for larger viewport widths  */
   
     /* Medium screens - invoked when viewport is between 600px and 800px. Flex-basis invoked if less than 600px */
     @media all and (min-width: 600px) {
@@ -76,7 +122,15 @@ body {
             flex-flow: row wrap;
             justify-content: flex-end;
             }
-        
+        .flex-projects-container {
+            flex-flow: row wrap;
+        }
+        .flex-project-featured {
+            flex: 1 100%;
+        }
+        .flex-project {
+            flex: 1 40%;
+        }
     }
 
     /* Large screens - invoked when viewport is 800px or wider */
@@ -89,5 +143,9 @@ body {
         .main    { order: 2; }
         .aside-2 { order: 3; }
         .footer  { order: 4; }
-        
+        .flex-project-featured {
+            flex: 1 50%;
+        }
+        .flex-project {
+            flex: 1 20%;
     }
