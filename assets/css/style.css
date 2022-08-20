@@ -1,0 +1,93 @@
+.wrapper {
+    display: flex;  
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center; 
+}
+
+/* We tell all items to be 100% width, via flex-basis.  */
+.wrapper > * {
+    flex: 1 100%;
+    padding: 10px;
+  }
+
+
+/* Main Nav styled for Mobile first 3 column with full-width header and footer that's independent from source order. */
+.navigation {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    
+    padding: 0;
+    margin: 0;
+    background: black;
+    list-style: none;
+  }
+.navigation a { 
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    display: block;
+    padding: 1em;
+    color: white;
+    
+    border-top: 1px solid rgba(255, 255, 255,0.3); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+  }
+.navigation li:last-of-type a {
+    border-bottom: none;
+  }
+
+.navigation a:hover {
+    background: lightcoral;
+}
+
+
+/* Flex Grid Styling  */
+.header {
+    background: tomato;
+  }
+  
+.footer {
+    background: lightgreen;
+  }
+  
+.main {
+    text-align: left;
+    background: deepskyblue;
+  }
+  
+.aside-1 {
+    background: gold;
+  }
+  
+.aside-2 {
+    background: hotpink;
+  }
+body {
+    padding: 2em; 
+  }
+/* Media Queries for larger viewport widths  */
+  
+    /* Medium screens - invoked when viewport is between 600px and 800px. Flex-basis invoked if less than 600px */
+    @media all and (min-width: 600px) {
+        .aside { flex: 1 0 0;}
+        .navigation {
+            flex-flow: row wrap;
+            justify-content: flex-end;
+            }
+        
+    }
+
+    /* Large screens - invoked when viewport is 800px or wider */
+    /* We invert order of first sidebar and main
+   * And tell the main element to take three times as much width as the other two sidebars 
+   */
+    @media all and (min-width: 800px) {
+        .main    { flex: 3 0px; }
+        .aside-1 { order: 1; } 
+        .main    { order: 2; }
+        .aside-2 { order: 3; }
+        .footer  { order: 4; }
+        
+    }
