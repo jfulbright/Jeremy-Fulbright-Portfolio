@@ -11,6 +11,10 @@
     padding: 10px;
   }
 
+  .wrapper-main {
+    padding: 0;
+  }
+
 
 /* Main Nav styled for Mobile first 3 column with full-width header and footer that's independent from source order. */
 .navigation {
@@ -44,6 +48,12 @@
     background: lightcoral;
 }
 
+h1, h2, h3, h4, h5, h6, p, a {
+    font-family: raleway,Arial,sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 10px
+}
 
 /* Flex Grid Styling  */
 .header {
@@ -110,7 +120,7 @@
     background: hotpink;
   }
 body {
-    padding: 2em; 
+    padding: 2em;
   }
 
   /* Media Queries for larger viewport widths  */
@@ -118,34 +128,36 @@ body {
     /* Medium screens - invoked when viewport is between 600px and 800px. Flex-basis invoked if less than 600px */
     @media all and (min-width: 600px) {
         .aside { flex: 1 0 0;}
+        
         .navigation {
             flex-flow: row wrap;
-            justify-content: flex-end;
+            justify-content: center;
             }
-        .flex-projects-container {
-            flex-flow: row wrap;
-        }
-        .flex-project-featured {
-            flex: 1 100%;
-        }
-        .flex-project {
-            flex: 1 40%;
-        }
+        .flex-projects-container {flex-flow: row wrap;}
+        .flex-project-featured {flex: 1 100%;}
+        .flex-project {flex: 1 40%;}
     }
 
-    /* Large screens - invoked when viewport is 800px or wider */
-    /* We invert order of first sidebar and main
-   * And tell the main element to take three times as much width as the other two sidebars 
-   */
+    /* Large screens - invoked when viewport is wider than 800px */
     @media all and (min-width: 800px) {
-        .main    { flex: 3 0px; }
-        .aside-1 { order: 1; } 
-        .main    { order: 2; }
-        .aside-2 { order: 3; }
-        .footer  { order: 4; }
-        .flex-project-featured {
-            flex: 1 50%;
+       
+        .aside-1 {
+            flex: 1;
         }
-        .flex-project {
-            flex: 1 20%;
+        .wrapper-main {
+            flex: 4;
+            display: flex;  
+            flex-flow: row wrap; 
+            padding: 0;
+        }
+        .header {
+            flex: 1 100%;
+        }
+        .navigation {
+            flex: 1 100%;
+            justify-content: flex-end;
+        }
+
+        .flex-project-featured {flex: 1 50%;}
+        .flex-project {flex: 1 20%;}
     }
