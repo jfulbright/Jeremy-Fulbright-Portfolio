@@ -1,78 +1,176 @@
+body {
+    padding: 2em;
+    background-color: #f1f1f1;
+    padding: 0;
+    margin: 3%;
+}
+
 .wrapper {
-    display: flex;  
+    display: flex;
     flex-flow: row wrap;
     font-weight: bold;
-    text-align: center; 
+    text-align: left;
+
 }
 
 /* We tell all items to be 100% width, via flex-basis.  */
-.wrapper > * {
+.wrapper>* {
     flex: 1 100%;
     padding: 10px;
-  }
+}
 
-  .wrapper-main {
+.wrapper-main {
     padding: 0;
-  }
+    padding-left: 10px;
+    margin: 5px;
+
+}
+
+/* Left Aside Column Styles */
+.aside-1 {
+    background: #fff;
+    padding: 0;
+    padding-top: 5px;
+}
+
+.img-avatar {
+    background-color: whitesmoke;
+    width: 25%;
+    padding: 0px;
+    margin: 10px;
+    margin-right: 20px;
+    border-radius: 100%;
+    float: left;
+}
+
+.img-avatar:hover {
+    background-color: aqua;
+    transition: .5s ease;
+}
+
+ul.contactMe {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-end;
+    list-style: none;
+    padding: 0;
+    
+}
+
+.contactMe li {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
 
 
-/* Main Nav styled for Mobile first 3 column with full-width header and footer that's independent from source order. */
+
+.GitHubIcon {
+    width: 20px;
+    height: 20px;
+
+}
+
+.LinkedInIcon {
+    width: 22px;
+
+}
+
+.eMailIcon {
+    width: 20px;
+}
+
+.contactMe a {
+    color: lightskyblue;
+}
+
+.contactMeLinks {
+    display: none;
+}
+
+/* Main Nav styled for Mobile first 2 column with full-width header and footer that's independent from source order. */
 .navigation {
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
-    
+
     padding: 0;
     margin: 0;
     background: black;
     list-style: none;
-  }
-.navigation a { 
+}
+
+.navigation a {
     text-decoration: none;
     text-align: center;
     padding: 10px;
     display: block;
     padding: 1em;
     color: white;
-    
-    border-top: 1px solid rgba(255, 255, 255,0.3); 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
-  }
-  
+
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 
 .navigation li:last-of-type a {
     border-bottom: none;
-  }
+}
 
 .navigation a:hover {
     background: lightcoral;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
-    font-family: raleway,Arial,sans-serif;
+    font-family: Raleway, Arial, sans-serif;
     font-weight: 400;
     margin: 0;
-    padding: 10px
+    padding: 5px;
+    color: rgb(61, 60, 60)
+}
+
+h1 {
+    font-size: 300%;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 150%;
+    margin: 3% 0;
+
+}
+
+h3 {
+    font-size: 125%;
+}
+
+h4 {
+    color: lightslategray;
+    font-size: 75%;
+    font-style: italic;
+    padding: 5px;
 }
 
 /* Flex Grid Styling  */
 .header {
-    background: tomato;
-  }
-  
+    padding: 20px 10px 10px 0px;
+}
+
 .footer {
-    background: lightgreen;
-  }
-  
+    background: black;
+    color: white;
+    text-align: center;
+}
+
 .main {
     display: flex;
     flex-flow: column;
     text-align: left;
-    background: deepskyblue;
-  }
+    /* background: deepskyblue; */
+}
 
 
-  /* Flex Project Styling  */
+/* Flex Project Styling  */
 
 .flex-projects-container {
     display: flex;
@@ -95,7 +193,7 @@ h1, h2, h3, h4, h5, h6, p, a {
     font-weight: bold;
     font-size: 3em;
     text-align: center;
-  }
+}
 
 .flex-project {
     background: tomato;
@@ -109,55 +207,100 @@ h1, h2, h3, h4, h5, h6, p, a {
     font-weight: bold;
     font-size: 3em;
     text-align: center;
-  }
+}
 
-/* Aside Column Styles */
-.aside-1 {
-    background: gold;
-  }
-  
-.aside-2 {
-    background: hotpink;
-  }
-body {
-    padding: 2em;
-  }
 
-  /* Media Queries for larger viewport widths  */
-  
-    /* Medium screens - invoked when viewport is between 600px and 800px. Flex-basis invoked if less than 600px */
-    @media all and (min-width: 600px) {
-        .aside { flex: 1 0 0;}
+
+
+
+/* Media Queries for larger viewport widths  */
+
+/* Medium screens - invoked when viewport is between 600px and 800px. Flex-basis invoked if less than 600px */
+@media all and (min-width: 600px) {
+    .aside {
+        flex: 1 0 0;
+    }
+
+    .navigation {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .flex-projects-container {
+        flex-flow: row wrap;
+    }
+
+    .flex-project-featured {
+        flex: 1 100%;
+    }
+
+    .flex-project {
+        flex: 1 40%;
+    }
+}
+
+/* Large screens - invoked when viewport is wider than 800px */
+@media all and (min-width: 800px) {
+    body {
+        padding: 0;
+        margin: 0;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .aside-1 {
+        flex: 1;
+        padding: 15px 20px;
+    }
+
+    ul.contactMe {
+        display: flex;
+        flex-flow: column nowrap;
+        align-content: flex-start;
+        list-style: none;
+    }
+    ul.contactMe a {
+        padding-right: 5px;
         
-        .navigation {
-            flex-flow: row wrap;
-            justify-content: center;
-            }
-        .flex-projects-container {flex-flow: row wrap;}
-        .flex-project-featured {flex: 1 100%;}
-        .flex-project {flex: 1 40%;}
     }
 
-    /* Large screens - invoked when viewport is wider than 800px */
-    @media all and (min-width: 800px) {
-       
-        .aside-1 {
-            flex: 1;
-        }
-        .wrapper-main {
-            flex: 4;
-            display: flex;  
-            flex-flow: row wrap; 
-            padding: 0;
-        }
-        .header {
-            flex: 1 100%;
-        }
-        .navigation {
-            flex: 1 100%;
-            justify-content: flex-end;
-        }
-
-        .flex-project-featured {flex: 1 50%;}
-        .flex-project {flex: 1 20%;}
+    .contactMeLinks {
+        display: inline;
     }
+
+    .img-avatar {
+        background-color: whitesmoke;
+        width: 50%;
+        border-radius: 10%;
+        padding: 10px 0px 0px 0px;
+        float: none;
+    }
+
+    .wrapper-main {
+        flex: 4;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 0;
+    }
+
+    .header {
+        flex: 1 100%;
+    }
+
+    .navigation {
+        flex: 1 100%;
+        justify-content: flex-start;
+    }
+
+    .flex-project-featured {
+        flex: 1 50%;
+    }
+
+    .flex-project {
+        flex: 1 20%;
+    }
+
+    .footer {
+        flex: 1 100%;
+    }
+}
