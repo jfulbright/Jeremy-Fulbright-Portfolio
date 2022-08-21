@@ -47,7 +47,7 @@ body {
     background-color: aqua;
     transition: .5s ease;
 }
-
+/* Left Aside Contact Styles */
 ul.contactMe {
     display: flex;
     flex-flow: row wrap;
@@ -62,7 +62,6 @@ ul.contactMe {
     flex-flow: row nowrap;
     align-items: center;
 }
-
 
 
 .GitHubIcon {
@@ -141,7 +140,8 @@ h2 {
 }
 
 h3 {
-    font-size: 125%;
+    font-size: 100%;
+    padding: 5px;
 }
 
 h4 {
@@ -149,6 +149,12 @@ h4 {
     font-size: 75%;
     font-style: italic;
     padding: 5px;
+}
+
+p {
+    font-size: 14px;
+    padding: 10px;
+    text-align: left;
 }
 
 /* Flex Grid Styling  */
@@ -182,31 +188,37 @@ h4 {
 }
 
 .flex-project-featured {
-    background: tomato;
+    background: black;
     padding: 5px;
     margin: 5px;
-    /* width: 200px;
-    height: 150px; */
     margin-top: 10px;
-    line-height: 150px;
     color: white;
     font-weight: bold;
     font-size: 3em;
     text-align: center;
 }
 
+.flex-project-featured img {
+    width: 100%;
+    padding-bottom: -50px;
+    
+}
+
 .flex-project {
-    background: tomato;
+    background: black;
     padding: 5px;
     margin: 5px;
     /* width: 150px;
     height: 150px; */
     margin-top: 10px;
-    line-height: 100px;
     color: white;
     font-weight: bold;
     font-size: 3em;
     text-align: center;
+}
+
+.flex-project img {
+    width: 100%;
 }
 
 
