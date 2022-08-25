@@ -1,16 +1,53 @@
+/* Setting Baseline Text Decloration Styles here  */
 body {
     padding: 2em;
     background-color: #f1f1f1;
     padding: 0;
     margin: 3%;
 }
+h1, h2, h3, h4, h5, h6, p, a {
+    font-family: Raleway, Arial, sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 5px;
+    color: rgb(61, 60, 60)
+}
 
+h1 {
+    font-size: 300%;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 150%;
+    margin: 3% 0;
+
+}
+
+h3 {
+    font-size: 100%;
+    padding: 5px;
+}
+
+h4 {
+    color: lightslategray;
+    font-size: 75%;
+    font-style: italic;
+    padding: 5px;
+}
+
+p {
+    font-size: 14px;
+    padding: 25px;
+    text-align: left;
+}
+
+/* Setting Baseline FlexBox Grid Layout here  */
 .wrapper {
     display: flex;
     flex-flow: row wrap;
     font-weight: bold;
     text-align: left;
-
 }
 
 /* We tell all items to be 100% width, via flex-basis.  */
@@ -23,10 +60,25 @@ body {
     padding: 0;
     padding-left: 10px;
     margin: 5px;
-
 }
 
-/* Left Aside Column Styles */
+.header {
+    padding: 20px 10px 10px 0px;
+}
+
+.footer {
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+}
+
+/* Setting Left Aside Column Grid Layout and UI Styles */
 .aside-1 {
     background: #fff;
     padding: 0;
@@ -63,6 +115,20 @@ ul.contactMe {
     align-items: center;
 }
 
+.contactMe a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+.contactMe a:hover {
+    background-color: #f1f1f1;
+    color: black;
+    text-decoration: none;
+}
+
+.contactMeLinks {
+    display: none;
+    background-color: black;
+}
 
 .GitHubIcon {
     width: 20px;
@@ -79,25 +145,18 @@ ul.contactMe {
     width: 20px;
 }
 
-.contactMe a {
-    color: lightskyblue;
-}
-
-.contactMeLinks {
-    display: none;
-}
-
-/* Main Nav styled for Mobile first 2 column with full-width header and footer that's independent from source order. */
+/* Main Nav styled for Mobile first 2 column layout */
 .navigation {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: space-around;
 
     padding: 0;
     margin: 0;
     background: black;
     list-style: none;
-}
+    text-transform: uppercase;
+} 
 
 .navigation a {
     text-decoration: none;
@@ -120,61 +179,28 @@ ul.contactMe {
     background: lightcoral;
 }
 
-h1, h2, h3, h4, h5, h6, p, a {
-    font-family: Raleway, Arial, sans-serif;
-    font-weight: 400;
-    margin: 0;
-    padding: 5px;
-    color: rgb(61, 60, 60)
+
+.dropdown-1 {
+position: absolute;
+display: flex;
+flex-direction: column;
+width: 100%;
 }
 
-h1 {
-    font-size: 300%;
-    padding: 10px;
-}
+.dropdown-1 li {
+display: none;
+  }
 
-h2 {
-    font-size: 150%;
-    margin: 3% 0;
-
-}
-
-h3 {
-    font-size: 100%;
-    padding: 5px;
-}
-
-h4 {
-    color: lightslategray;
-    font-size: 75%;
-    font-style: italic;
-    padding: 5px;
-}
-
-p {
-    font-size: 14px;
-    padding: 10px;
-    text-align: left;
-}
-
-/* Flex Grid Styling  */
-.header {
-    padding: 20px 10px 10px 0px;
-}
-
-.footer {
-    background: black;
-    color: white;
-    text-align: center;
-}
-
-.main {
-    display: flex;
+.navigation li:hover .dropdown-1 > li {
     flex-flow: column;
-    text-align: left;
-    /* background: deepskyblue; */
-}
+    display: block;
+    position: relative;
+    top:0;
+    background: black;
+} 
 
+  
+ 
 
 /* Flex Project Styling  */
 
@@ -201,7 +227,7 @@ p {
 .flex-project-featured img {
     width: 100%;
     padding-bottom: -50px;
-    
+    background-color: #f1f1f1;
 }
 
 .flex-project {
@@ -223,8 +249,6 @@ p {
 
 
 
-
-
 /* Media Queries for larger viewport widths  */
 
 /* Medium screens - invoked when viewport is between 600px and 800px. Flex-basis invoked if less than 600px */
@@ -236,6 +260,16 @@ p {
     .navigation {
         flex-flow: row wrap;
         justify-content: center;
+    }
+
+    .navigation a {
+    text-decoration: none;
+    text-align: left;
+    padding: 10px;
+    color: white;
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 12px;
     }
 
     .flex-projects-container {
@@ -270,9 +304,10 @@ p {
         flex-flow: column nowrap;
         align-content: flex-start;
         list-style: none;
+    
     }
     ul.contactMe a {
-        padding-right: 5px;
+        padding-right: 5px; 
         
     }
 
@@ -299,11 +334,44 @@ p {
         flex: 1 100%;
     }
 
+    /* Global Navigation with sub-menu */
     .navigation {
         flex: 1 100%;
         justify-content: flex-start;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+     
+    }
+  
+    .navigation a {
+        text-decoration: none;
+        text-align: left;
+        padding: 10px;
+        color: white;
+        display: block;
+        padding-top: 12px;
+        padding-bottom: 12px;
     }
 
+    .dropdown-1 {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        padding: 0;
+      }
+
+    .dropdown-1 li {
+        display: none;
+      }
+
+    .navigation li:hover .dropdown-1 > li {
+        display: block;
+        width: 200px;
+        background-color: black;
+        text-align: left;
+    }
+
+  /* Main Projecg Grid Definitions */
     .flex-project-featured {
         flex: 1 50%;
     }
