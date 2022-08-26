@@ -1,0 +1,504 @@
+/* Setting Baseline Text Decloration Styles here  */
+body {
+    padding: 2em;
+    background-color: #e4dfdf;
+    padding: 0;
+    margin: 3%;
+}
+h1, h2, h3, h4, h5, h6, p, a {
+    font-family: Raleway, Verdana, sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 5px;
+    color: rgb(121, 119, 119)
+}
+
+h1 {
+    font-size: 300%;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 150%;
+    margin: 3% 0;
+
+}
+
+h3 {
+    font-size: 100%;
+    padding: 5px;
+}
+
+h4 {
+    color: lightslategray;
+    font-size: 75%;
+    padding: px;
+}
+
+p {
+    font-size: 14px;
+    padding: 5px 20px 5px;
+    text-align: left;
+    line-height: 20px;
+    font-family: Verdana, sans-serif;
+}
+
+p a {
+    color:aqua;
+    font-family: Verdana, sans-serif;
+    text-decoration: none;
+}
+
+p a:hover {
+    color:coral;
+    text-decoration: underline;
+}
+
+.intro {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* Setting Baseline FlexBox Grid Layout here  */
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #faf5f5;
+}
+
+/* Setting grid styles for each section here  */
+.wrapper>* {
+    flex: 1 100%;
+    padding: 10px;
+}
+
+.wrapper-main {
+    padding: 0;
+    padding-left: 10px;
+    margin: 5px;
+}
+
+.header {
+    padding: 20px 10px 10px 0px;
+}
+
+.footer {
+    background: black;
+}
+
+.footer p {
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.main {
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+}
+
+/* Setting gird styles for Left Aside Column Grid */
+.aside-1 {
+    background: #fff;
+    padding: 0;
+    padding-top: 5px;
+}
+
+.img-avatar {
+    background-color: whitesmoke;
+    width: 25%;
+    padding: 0px;
+    margin: 10px;
+    margin-right: 20px;
+    border-radius: 100%;
+    float: left;
+}
+
+.img-avatar:hover {
+    background-color: lightcoral;
+    transition: .5s ease;
+}
+
+
+/* Left Aside Contact Element Styles */
+ul.contactMe {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-end;
+    list-style: none;
+    padding: 0;
+    
+}
+
+.contactMe li {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.contactMe a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+.contactMe a:hover {
+    background-color: lightcoral;
+    color: black;
+    text-decoration: none;
+}
+
+.contactMeLinks {
+    display: none;
+    background-color: black;
+}
+
+.GitHubIcon {
+    width: 20px;
+    padding-right: 5px;
+
+}
+
+.LinkedInIcon {
+    width: 22px;
+    padding-right: 5px;
+}
+
+.eMailIcon {
+    width: 20px;
+    padding-right: 5px;
+}
+
+/* Main Nav styled for Mobile first 2 column layout */
+.navigation {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+
+    padding: 0;
+    margin: 0;
+    background: black;
+    list-style: none;
+    /* text-transform: uppercase; */
+} 
+
+.navigation a {
+    text-decoration: none;
+    text-align: center;
+    padding: 15px;
+    display: block;
+    padding: 1em;
+    color: white;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.navigation li:last-of-type a {
+    border-bottom: none;
+}
+
+.navigation a:hover {
+    background: lightcoral;
+}
+.navigation a:focus {
+    background: lightcoral;
+}
+
+
+/* Styles for a nested sub-menu. This isn't active, but stubbed out for future use cases */
+.dropdown-1 {
+position: absolute;
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+
+.dropdown-1 li {
+display: none;
+  }
+
+.navigation li:hover .dropdown-1 > li {
+    flex-flow: column;
+    display: block;
+    position: relative;
+    top:0;
+    background: black;
+} 
+
+  
+ 
+
+/* Main Section - Flex Card Styling  */
+
+.flex-projects-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.flex-project-featured {
+    background: black;
+    padding: 5px;
+    margin: 5px;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+}
+
+.flex-project-featured img {
+    width: 100%;
+    padding-bottom: -50px;
+    background-color: #f1f1f1;
+}
+.flex-project-featured a {
+    padding: 0;
+}
+
+.flex-project {
+    background: black;
+    padding: 5px;
+    margin: 5px;
+    margin-top: 10px;
+    color: white;
+    font-size: 3em;
+    text-align: center;
+}
+
+.flex-project img {
+    width: 100%;
+}
+.flex-project a {
+    padding: 0;
+}
+
+
+/* Font Styling for Project Cards */
+.flex-projects-container p {
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 5px 20px 5px;
+    text-align: center;
+    line-height: 20px;
+    color: rgb(169, 165, 165); 
+}
+
+.flex-projects-container p a {
+    color:aqua;
+    text-decoration: none;
+}
+
+.flex-projects-container p a:hover {
+    color:lightcoral;
+    text-decoration: underline;
+}
+
+#comingSoon {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Classes that style the Active Project Card when clicked from main nav */
+.flex-project:target {
+    background-color: #fff;
+    transition: 1.7s ease;
+    box-shadow: 0 0 10px rgb(74, 73, 73) ;
+    border: 2px solid black;
+}
+
+.flex-project:target p, h3, a {
+    color:#484646;
+}
+.flex-project:target a {
+    color: lightcoral;
+}
+/* Classes that style the Active Featured Project Card when clicked from main nav */
+.flex-project-featured:target {
+    background-color: #fff;
+    transition: 1.7s ease;
+    box-shadow: 0 0 10px rgb(74, 73, 73) ;
+    border: 2px solid black;
+}
+
+.flex-project-featured:target p, h3, a {
+    color:#484646;
+}
+.flex-project-featured:target a {
+    color: lightcoral;
+}
+
+
+/* Setting format styles for Contact Form */
+.contact {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+/* Classes that style Contact section when clicked from main nav */
+.contact:target {
+    background-color: #fff;
+    transition: 1.7s ease;
+    box-shadow: 0 0 10px rgb(74, 73, 73) ;
+    border: 2px solid black;
+}
+
+  .FormFlex {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  
+  label {
+    display: block;
+  }
+  
+  button {
+    
+    margin-top: 15px;
+    padding: 12px;
+    color: #fff;
+    background-color: lightcoral;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+
+
+/* Media Queries for larger viewport widths  */
+
+/* Medium screens - invoked when viewport is between 600px and 800px. Flex-basis invoked if less than 600px */
+@media all and (min-width: 600px) {
+    .aside {
+        flex: 1 0 0;
+    }
+
+    .navigation {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .navigation a {
+    text-decoration: none;
+    text-align: left;
+    padding: 20px;
+    color: white;
+    display: block;
+    }
+
+    .flex-projects-container {
+        flex-flow: row wrap;
+    }
+
+    .flex-project-featured {
+        flex: 1 100%;
+    }
+
+    .flex-project {
+        flex: 1 40%;
+    }
+}
+
+/* Large screens - invoked when viewport is wider than 800px */
+@media all and (min-width: 800px) {
+    body {
+        padding: 0;
+        margin: 0;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .aside-1 {
+        flex: 1;
+        padding: 15px 20px;
+    }
+
+    ul.contactMe {
+        display: flex;
+        flex-flow: column nowrap;
+        align-content: flex-start;
+        list-style: none;
+    
+    }
+    ul.contactMe a {
+        padding-right: 5px; 
+        
+    }
+
+    .contactMeLinks {
+        display: inline;
+    }
+
+    .img-avatar {
+        background-color: whitesmoke;
+        width: 50%;
+        border-radius: 10%;
+        padding: 10px 0px 0px 0px;
+        float: none;
+    }
+
+    .wrapper-main {
+        flex: 4;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 0;
+    }
+
+    .header {
+        flex: 1 100%;
+    }
+
+    /* Global Navigation with sub-menu */
+    .navigation {
+        flex: 1 100%;
+        justify-content: flex-start;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+     
+    }
+  
+    .navigation a {
+        text-decoration: none;
+        text-align: left;
+        padding: 20px;
+        color: white;
+        display: block;
+    }
+
+    .dropdown-1 {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        padding: 0;
+      }
+
+    .dropdown-1 li {
+        display: none;
+      }
+
+    .navigation li:hover .dropdown-1 > li {
+        display: block;
+        width: 200px;
+        background-color: black;
+        text-align: left;
+    }
+
+  /* Main Projecg Grid Definitions */
+    .flex-project-featured {
+        flex: 1 50%;
+    }
+
+    .flex-project {
+        flex: 1 20%;
+    }
+
+    .footer {
+        flex: 1 100%;
+    }
+}
