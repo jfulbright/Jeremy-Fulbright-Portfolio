@@ -11,6 +11,7 @@
 </head>
 <body>
     <div class="wrapper">
+     <!-- Lef Aside Column -->
         <aside class="aside-1">
             <img src="../Jeremy-Fulbright-Portfolio/assets/images/JeremyHeadshot-informal2.png" alt="Avatar" class="img-avatar">
             <h2>Jeremy Fulbright</h2>
@@ -20,11 +21,12 @@
                 <li><a href="mailto:jfulbright@gmail.com"><img src="../Jeremy-Fulbright-Portfolio/assets/images/eMailIcon.png" alt="eMail" class="eMailIcon"></a><a class="contactMeLinks" href="mailto:jfulbright@gmail.com">eMail Me</a></li>
             </ul>
         </aside>
+         <!-- Header -->
         <div class="wrapper-main">
             <header class="header">
                 <h1>My Portfolio</h1>
             </header>
-            <!-- Top Navigation Menu -->
+            <!-- Main Navigation Menu -->
             <ul class="navigation">
                 <li><a href="#FlexBox">CSS FlexBox</a></li>
                 <li><a href="#Javascript">Javascript</a>
@@ -37,17 +39,20 @@
                     </ul> -->
                 </li>
                 <li><a href="#AccessibilityRefactor">Accessibility</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+             <!-- Main Section - Project Cards -->
             <article class="main">
                 <p class="intro">Seasoned leader with a passion for building and scaling product development, engineering and professional services teams in a dynamic SaaS, Software or Marketing Technology organization.</p>  
                 <div class="flex-projects-container">
+                     <!-- Featured Project Card displayed prominently -->
                     <div class="flex-project-featured" id="FlexBox">
-                        <a href="https://jfulbright.github.io/proj--Accessibility-CSS-Refactor/"><img src="/Jeremy-Fulbright-Portfolio/assets/images/Flexbox.png"></a>
+                        <a href="https://jfulbright.github.io/Jeremy-Fulbright-Portfolio/"><img src="/Jeremy-Fulbright-Portfolio/assets/images/Flexbox.png"></a>
                         <h3>CSS Flexbox</h3>
                         <p>The objective of this project was to developer a personal portfolio site to showcase my apps and apply core front end skills in flexbox, media quaeries and CSS variables.</p>
-                        <p><a href="https://jfulbright.github.io/proj--Accessibility-CSS-Refactor/">Demo Site</a> | <a href="https://github.com/jfulbright/proj--Accessibility-CSS-Refactor">GitHub Repo</a></p>
+                        <p><a href="https://jfulbright.github.io/Jeremy-Fulbright-Portfolio/">Demo Site</a> | <a href="https://github.com/jfulbright/Jeremy-Fulbright-Portfolio">GitHub Repo</a></p>
                     </div>
+                     <!-- Standard Project Card displayed less prominently -->
                     <div class="flex-project" id="Javascript">
                         <img src="../Jeremy-Fulbright-Portfolio/assets/images/JavaScript-code.png">
                         <h3>Javascript</h3>
@@ -72,7 +77,32 @@
                     </div>
                 </div>
             </article>
-            <footer class="footer"><p>Footer</p></footer>
+             <!-- Contact Form Section -->
+            <article class="contact" id="contact">
+                <form>
+                    <h1>Get in touch:</h1>
+                    <div class="FormFlex">
+                        <p>
+                        <label for="username">Name:</label>
+                        <input id="username" type="text" placeholder="First Last" />
+                        </p>
+                        <p>
+                        <label  for="email">E-mail:</label>
+                        <input id="email" type="text" placeholder="me@example.com" />
+                        </p>
+                        <p>
+                        <label for="comment">Comment:</label>
+                        <textarea id="comment" placeholder=""></textarea>
+                        </p>
+                        <p>
+                            <button>Submit</button>
+                        </p>
+                    </div>
+                    
+                </form>
+            </article>
+             <!-- Footer -->
+            <footer class="footer"><p>&#169; Jeremy Fulbright</p></footer>
         </div>
     </div>
 </body>

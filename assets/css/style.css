@@ -66,7 +66,7 @@ p a:hover {
     background-color: #faf5f5;
 }
 
-/* We tell all items to be 100% width, via flex-basis.  */
+/* Setting grid styles for each section here  */
 .wrapper>* {
     flex: 1 100%;
     padding: 10px;
@@ -84,8 +84,12 @@ p a:hover {
 
 .footer {
     background: black;
+}
+
+.footer p {
     color: white;
     text-align: center;
+    padding: 25px;
 }
 
 .main {
@@ -94,7 +98,7 @@ p a:hover {
     text-align: left;
 }
 
-/* Setting Left Aside Column Grid Layout and UI Styles */
+/* Setting gird styles for Left Aside Column Grid */
 .aside-1 {
     background: #fff;
     padding: 0;
@@ -117,7 +121,7 @@ p a:hover {
 }
 
 
-/* Left Aside Contact Styles */
+/* Left Aside Contact Element Styles */
 ul.contactMe {
     display: flex;
     flex-flow: row wrap;
@@ -181,7 +185,7 @@ ul.contactMe {
 .navigation a {
     text-decoration: none;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     display: block;
     padding: 1em;
     color: white;
@@ -198,8 +202,12 @@ ul.contactMe {
 .navigation a:hover {
     background: lightcoral;
 }
+.navigation a:focus {
+    background: lightcoral;
+}
 
 
+/* Styles for a nested sub-menu. This isn't active, but stubbed out for future use cases */
 .dropdown-1 {
 position: absolute;
 display: flex;
@@ -259,7 +267,6 @@ display: none;
     margin: 5px;
     margin-top: 10px;
     color: white;
-    font-weight: bold;
     font-size: 3em;
     text-align: center;
 }
@@ -269,6 +276,32 @@ display: none;
 }
 .flex-project a {
     padding: 0;
+}
+
+
+/* Font Styling for Project Cards */
+.flex-projects-container p {
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 5px 20px 5px;
+    text-align: center;
+    line-height: 20px;
+    color: rgb(169, 165, 165); 
+}
+
+.flex-projects-container p a {
+    color:aqua;
+    text-decoration: none;
+}
+
+.flex-projects-container p a:hover {
+    color:lightcoral;
+    text-decoration: underline;
+}
+
+#comingSoon {
+    text-align: center;
+    padding: 20px;
 }
 
 /* Classes that style the Active Project Card when clicked from main nav */
@@ -300,32 +333,41 @@ display: none;
     color: lightcoral;
 }
 
-/* Font Styling for Project Cards */
-.flex-projects-container p {
-    font-size: 14px;
-    padding: 5px 20px 5px;
-    text-align: center;
-    line-height: 20px;
-    color:lightgray; 
-    font-family: Verdana, sans-serif;
+
+/* Setting format styles for Contact Form */
+.contact {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+/* Classes that style Contact section when clicked from main nav */
+.contact:target {
+    background-color: #fff;
+    transition: 1.7s ease;
+    box-shadow: 0 0 10px rgb(74, 73, 73) ;
+    border: 2px solid black;
 }
 
-.flex-projects-container p a {
-    color:aqua;
-    font-family: Verdana, sans-serif;
-    text-decoration: none;
-}
-
-.flex-projects-container p a:hover {
-    color:lightcoral;
-    text-decoration: underline;
-}
-
-#comingSoon {
-    text-align: center;
-    padding: 20px;
-}
-
+  .FormFlex {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  
+  label {
+    display: block;
+  }
+  
+  button {
+    
+    margin-top: 15px;
+    padding: 12px;
+    color: #fff;
+    background-color: lightcoral;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
 
 
 
@@ -345,11 +387,9 @@ display: none;
     .navigation a {
     text-decoration: none;
     text-align: left;
-    padding: 10px;
+    padding: 20px;
     color: white;
     display: block;
-    padding-top: 12px;
-    padding-bottom: 12px;
     }
 
     .flex-projects-container {
@@ -426,11 +466,9 @@ display: none;
     .navigation a {
         text-decoration: none;
         text-align: left;
-        padding: 10px;
+        padding: 20px;
         color: white;
         display: block;
-        padding-top: 12px;
-        padding-bottom: 12px;
     }
 
     .dropdown-1 {
