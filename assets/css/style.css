@@ -1,7 +1,7 @@
 /* Setting Baseline Text Decloration Styles here  */
 body {
     padding: 2em;
-    background-color: #f1f1f1;
+    background-color: #e4dfdf;
     padding: 0;
     margin: 3%;
 }
@@ -48,6 +48,7 @@ p {
     flex-flow: row wrap;
     font-weight: bold;
     text-align: left;
+    background-color: #faf5f5;
 }
 
 /* We tell all items to be 100% width, via flex-basis.  */
@@ -229,6 +230,9 @@ display: none;
     padding-bottom: -50px;
     background-color: #f1f1f1;
 }
+.flex-project-featured a {
+    padding: 0;
+}
 
 .flex-project {
     background: black;
@@ -245,6 +249,9 @@ display: none;
 
 .flex-project img {
     width: 100%;
+}
+.flex-project a {
+    padding: 0;
 }
 
 
